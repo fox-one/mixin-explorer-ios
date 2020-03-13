@@ -1,0 +1,129 @@
+
+"Host:" = "地址:";
+
+"Search Snapshot" = "搜索交易快照";
+"Result" = "结果";
+"Search" = "搜索";
+"Snapshot ID" = "交易快照ID";
+
+"Top Assets" = "TOP 资产";
+
+"Chain" = "主链";
+
+"Node" = "节点";
+
+"Tools" = "工具";
+
+"Name:" = "名称:";
+
+"Amount:" = "数量:";
+
+"Market Cap:" = "市值:";
+
+"Info" = "信息";
+
+"Price:" = "价格:";
+
+"Asset ID:" = "资产ID:";
+
+"Snapshots Count:" = "交易总数:";
+
+"Snapshots" = "交易快照";
+
+"Mixin Explorer" = "Mixin 浏览器";
+
+"Chain:" = "主链：";
+
+"Mining Calculator" = "节点挖矿计算";
+
+"Reward Vol (XIN)" = "奖励总量 (XIN)";
+
+"Reward %" = "奖励百分比 %";
+
+"Total Nodes" = "节点数量";
+
+"Calculate" = "计算";
+
+"Yearly rewards/node" = "单个节点一年奖励";
+
+"Daily rewards/node" = "单个节点一日奖励";
+
+"Annualized ROR" = "年化收益";
+
+"Mining" = "节点收益计算器";
+
+"Token Verify" = "资产持仓验证";
+
+"Token" = "校验Token";
+
+"No Data" = "暂无数据";
+
+"Website:" = "主页:";
+
+"Assets Count:" = "资产总数:";
+
+"Peak Throughput:" = "交易峰值:";
+
+"About Mixin Network" = "Mixin Network";
+
+"Snapshot ID:" = "交易ID：";
+
+"Time:" = "时间：";
+
+"Withdrawal Fee:" = "转出手续费:";
+
+"Synchronized:" = "同步状态:";
+
+"Deposit Block Height:" = "转入区块块高度:";
+
+"External Block Height:" = "External Block Height:";
+
+"Managed Block Height:" = "Managed Block Height:";
+
+"Withdrawal Pending Count:" = "转入排队数量:";
+
+"Withdrawal Timestamp:" = "转出时间戳:";
+
+"Status: 🟢" = "节点状态: 🟢";
+
+"Status: 🔴" = "节点状态: 🔴";
+
+"Snapshot Detail" = "交易快照详情";
+
+"Contact Developer" = "联系开发者";
+
+"About Mixin Explorer" = "Mixin 浏览器";
+
+"Source:" = "类型:";
+
+"Search Asset" = "链上资产搜索";
+
+"Search Asset Tip" = "输入您要查询的符号";
+
+"Symbol" = "符号， BTC";
+
+"Node Count:" = "节点数量:";
+
+"Chain Capitalization:" = "资产总额:";
+
+"Mining Tool" = "节点工具";
+
+"Search Mixin Network" = "搜索 Mixin Network";
+
+"About" = "关于";
+
+"Verify Tip" = "输入资产持仓验证的 Token";
+
+"Status:" = "节点状态:";
+
+"Yearly rewards" = "一年奖励 （XIN）";
+
+"After-tax ROR" = "扣除运营费用收益率";
+
+"Pool Fee %" = "矿池运营费率 （%）";
+
+"Pledge （XIN）" = "抵押总量 （XIN）";
+
+"Copied to Pasteboard" = "已复制到剪切板";
+
+"UP Time:" = "启动时间:";

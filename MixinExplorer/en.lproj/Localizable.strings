@@ -1,0 +1,133 @@
+
+"Host:" = "Host:";
+
+"Search Snapshot" = "Search Snapshot";
+
+"Result" = "Result";
+
+"Search" = "Search";
+
+"Snapshot ID" = "Snapshot ID";
+
+"Top Assets" = "Top Assets";
+
+"Chain" = "Chain";
+
+"Node" = "Node";
+
+"Tools" = "Tools";
+
+"Name:" = "Name:";
+
+"Amount:" = "Amount:";
+
+"Market Cap:" = "Market Cap:";
+
+"Info" = "Info";
+
+"Price:" = "Price:";
+
+"Asset ID:" = "Asset ID:";
+
+"Snapshots Count:" = "Snapshots Count:";
+
+"Snapshots" = "Snapshots";
+
+"Mixin Explorer" = "Mixin Explorer";
+
+"Chain:" = "Chain:";
+
+"Mining Calculator" = "Mining Calculator";
+
+"Reward Vol (XIN)" = "Reward Vol (XIN)";
+
+"Reward %" = "Reward %";
+
+"Total Nodes" = "Total Nodes";
+
+
+"Calculate" = "Calculate";
+
+"Yearly rewards/node" = "Yearly rewards/node";
+
+"Daily rewards/node" = "Daily rewards/node";
+
+"Annualized ROR" = "Annualized ROR";
+
+"Mining Tool" = "Mining Tools";
+
+"Mining" = "Mining Calculator";
+
+"Token Verify" = "Token Verify";
+
+"Token" = "Token";
+
+"No Data" = "No Data";
+
+"Website:" = "Website:";
+
+"Assets Count:" = "Assets Count:";
+
+"Peak Throughput:" = "Peak Throughput:";
+
+"About Mixin Network" = "About Mixin Network";
+
+"Snapshot ID:" = "Snapshot ID:";
+
+"Time:" = "Time：";
+
+"Withdrawal Fee:" = "Withdrawal Fee:";
+
+"Synchronized:" = "Synchronized:";
+
+"Deposit Block Height:" = "Deposit Block Height:";
+
+"External Block Height:" = "External Block Height:";
+
+"Managed Block Height:" = "Managed Block Height:";
+
+"Withdrawal Pending Count:" = "Withdrawal Pending Count:";
+
+"Withdrawal Timestamp:" = "Withdrawal Timestamp:";
+
+"Status: 🟢" = "Status: 🟢";
+
+"Status: 🔴" = "Status: 🔴";
+
+"Snapshot Detail" = "Snapshot Detail";
+
+"Contact Developer" = "Contact Developer";
+
+"About Mixin Explorer" = "About Mixin Explorer";
+
+"Source:" = "Type:";
+
+"Search Asset" = "Search Asset";
+
+"Search Asset Tip" = "Input Search Symbol";
+
+"Symbol" = "Symbol， BTC";
+
+"Node Count:" = "Node Count:";
+
+"Chain Capitalization:" = "Chain Capitalization:";
+
+"Search Mixin Network" = "Search Mixin Network";
+
+"About" = "About";
+
+"Verify Tip" = "Input asset verify token";
+
+"Status:" = "Status:";
+
+"Yearly rewards" = "Yearly rewards （XIN）";
+
+"After-tax ROR" = "After-tax ROR";
+
+"Pool Fee %" = "Pool Fee （%）";
+
+"Pledge （XIN）" = "Pledge （XIN）";
+
+"Copied to Pasteboard" = "Copied to Pasteboard";
+
+"UP Time:" = "UP Time:";
