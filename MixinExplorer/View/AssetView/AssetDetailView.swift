@@ -51,7 +51,7 @@ struct AssetDetailView: SwiftUI.View {
                                     .font(Font.system(size: 15))
                                     .foregroundColor(Color(.secondaryLabel))
                                     .lineLimit(1)
-                                Text("\(store.appState.snapDetail.asset!.name)").frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(store.appState.snapDetail.asset!.name)").frame(maxWidth: .infinity, alignment: .trailing)
                                     .font(Font.system(size: 15))
                                     .foregroundColor(Color(.label))
                             }
@@ -61,7 +61,7 @@ struct AssetDetailView: SwiftUI.View {
                                     .foregroundColor(Color(.secondaryLabel))
                                     .lineLimit(1)
                                 
-                                Text("\(store.appState.snapDetail.asset!.amountValue.decimalFormatter) \(model.symbol)").frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(store.appState.snapDetail.asset!.amountValue.decimalFormatter) \(model.symbol)").frame(maxWidth: .infinity, alignment: .trailing)
                                     .font(Font.system(size: 15))
                                     .foregroundColor(Color(.label))
                             }
@@ -73,7 +73,7 @@ struct AssetDetailView: SwiftUI.View {
                                     .foregroundColor(Color(.secondaryLabel))
                                     .lineLimit(1)
                                 Text("\(model.capitalization.decimalFormatter) USD")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
                                     .font(Font.system(size: 15))
                                     .foregroundColor(Color(.label))
                             }
@@ -83,10 +83,11 @@ struct AssetDetailView: SwiftUI.View {
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
                     
                 }
-                
-                Text("Info").font(Font.system(size: 17, weight: .bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 Divider()
+                Text("Info")
+                    .font(Font.system(size: 17, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
                 if store.appState.snapDetail.asset != nil {
                     HStack {
                         Text("Asset ID:")
@@ -99,9 +100,9 @@ struct AssetDetailView: SwiftUI.View {
                             
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(Font.system(size: 15))
-                            .foregroundColor(Color(.label))
-                            .lineLimit(1)
+                        .font(Font.system(size: 15))
+                        .foregroundColor(Color(.label))
+                        .lineLimit(1)
                     }
                     
                     //                    if store.appState.snapDetail.coin != nil {
@@ -128,7 +129,7 @@ struct AssetDetailView: SwiftUI.View {
                     //                        }
                     //                    }
                     
-
+                    
                     HStack {
                         Text("Snapshots Count:")
                             .font(Font.system(size: 15))
@@ -153,27 +154,33 @@ struct AssetDetailView: SwiftUI.View {
                                     .foregroundColor(Color(.systemBlue))
                             }
                             
+                            
+                            
+                        }
+                        
+                        HStack {
+                            Text("Withdrawal Fee:")
+                                .font(Font.system(size: 15))
+                                .foregroundColor(Color(.secondaryLabel))
+                                .lineLimit(1)
+                            Text("\(store.appState.snapDetail.chain!.withdrawalFee)")
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .font(Font.system(size: 15))
+                                .foregroundColor(Color(.label))
                         }
                         
                     } else {
                         ActivityIndicator(shouldAnimate: settingsBinding.loadingAsset)
                     }
                     
-                    
-                    
                 } else {
                     ActivityIndicator(shouldAnimate: settingsBinding.loadingAsset)
-                    
                 }
                 
-                //                Text("Chain").font(Font.system(size: 16,weight: .bold))
-                //                    .frame(maxWidth: .infinity, alignment: .leading)
-                //                Divider()
-                
-                
+                Divider()
                 Text("Snapshots").font(Font.system(size: 17,weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Divider()
+                
                 if store.appState.selectAssetSnapShotList.loadingSnapshots.loadingSnapShots {
                     ActivityIndicator(shouldAnimate: snapshotsBinding.loadingSnapShots)
                 } else {
@@ -185,7 +192,8 @@ struct AssetDetailView: SwiftUI.View {
                 
             }.padding(20)
             
-        }.navigationBarTitle("\(model.symbol)").onAppear {
+        }
+        .navigationBarTitle("\(model.symbol)").onAppear {
             if self.store.appState.snapDetail.asset != nil {
                 if self.store.appState.snapDetail.asset!.assetID != self.model.assetId {
                     self.store.dispatch(.loadMixinAsset(assetID: self.model.assetId))
@@ -202,7 +210,7 @@ struct AssetDetailView: SwiftUI.View {
         
         
     }
-        
+    
     func getChainIcon() -> URL? {
         if let chain = store.appState.mixinNetworkAssetList.chainMap[model.chainId] {
             return URL(string: chain.iconURL)
@@ -226,21 +234,19 @@ struct AssetDetailView: SwiftUI.View {
 func postNoti(subtitle: String) {
     
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (success, error) in
-         
-     }
+        
+    }
     
     
     let content = UNMutableNotificationContent()
-   
     content.title = "Copied to Pasteboard"
     content.body = subtitle
     
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
-    
     let request = UNNotificationRequest(identifier: "mixin.explore.noti", content: content, trigger: trigger)
-    
-    UNUserNotificationCenter.current().add(request) { _ in
-        
+    UNUserNotificationCenter.current()
+        .add(request) { _ in
+            
     }
 }
 

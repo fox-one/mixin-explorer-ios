@@ -15,7 +15,7 @@ struct LoadingTopMixinAssetRequest {
             .map { $0.data }
             .decode(type: NetworkList<[TopAsset]>.self, decoder: appDecoder)
             .map({ list -> [TopAsset] in
-                print(list)
+                
                 return list.data
             })
             .eraseToAnyPublisher()

@@ -26,7 +26,7 @@ struct LoadingMixinRequest {
             .map { $0.data }
             .decode(type: NetworkList<MixinNetworkAsset>.self, decoder: appDecoder)
             .map({ list -> MixinNetworkAsset in
-                print(list)
+                
                 return list.data
             })
             

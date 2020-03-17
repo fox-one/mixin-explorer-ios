@@ -1,0 +1,88 @@
+{
+    "banner": [
+        {
+            "title": "Mixin 节点哪家强？",
+            "subtitle": "Fox.ONE 新节点启动",
+            "icon_url": "banner",
+            "url" : "https://fox.zendesk.com/hc/zh-cn/articles/360038685791"
+        },
+        {
+            "title": "币多多",
+            "subtitle": "币多多 — 投得多，赚得多。值得信赖的数字财富管家。",
+            "icon_url": "banner2",
+            "url" : "mixin://apps/92104e94-18da-4768-86af-708280e9e317"
+        }
+    ],
+    "section": [
+        {
+            "title": "Mixin",
+            "data": [
+                {
+                    "title": "TaskWall",
+                    "sub_title": "Complete daily tasks to divide up the reward 完成每日任务，瓜分奖励",
+                    "icon_url": "https://mixin-images.zeromesh.net/lkxdT13Z4NGYevVZc76IU1cqhqHMwic5zsMI1AjNZJGUZ1DryZ_qYS401DRxZ-Jpnkf4MJ_ihkvTy33xOX3NoYI=s256",
+                    "url": "mixin://apps/e08207df-55de-4ad9-8463-af692824f988"
+                },
+                {
+                    "title": "Lucky BTC",
+                    "sub_title": "This is Lucky BTC Bot, you'll get BTC here!",
+                    "icon_url": "https://mixin-images.zeromesh.net/KKXs79wUTL9IM_iahoV42X1B6v7mqaGmqH3u-VvPhGQpT5bV6EI5VcEjqivSb8_FMN70QjIjAqsUa_0BGF4E3K4=s256",
+                    "url": "mixin://apps/71ae9403-9d20-4772-b47a-729e0cc3648b"
+                },
+                {
+                    "title": "Mixin 中文群",
+                    "sub_title": "Mixin 核心开发团队管理的中文群",
+                    "icon_url": "https://mixin-images.zeromesh.net/yldGRWFcoAk7u-vsTPvlqdNx7MHOWJhQ1bG47ZJvVdEN89oyKa1l6owLgy_HQQWH6IcF8cLbiSzroqOkY_KeAw=s256",
+                    "url": "mixin://apps/67a87828-18f5-46a1-b6cc-c72a97a77c43"
+                }
+            ]
+        },
+        {
+            "title": "Fox.ONE",
+            "data": [
+                {
+                    "title": "氢定投",
+                    "sub_title": "好用的定投工具\n",
+                    "icon_url": "https://mixin-images.zeromesh.net/nVF9elBMm9thbWcBN82vuMXv-PeMcq1arSon8OpcOzjdutY5cGENiO6Ik7tZHdrqxZnY4MT3bD5x3JhOx3-wXw=s256",
+                    "url" : "mixin://apps/3ec8c231-f5a2-4081-af15-e2eac80db745"
+                },
+                {
+                    "title": "Fox.ONE",
+                    "sub_title": "Mixin 社区中最大的交易技术团队。",
+                    "icon_url": "https://mixin-images.zeromesh.net/pcYrJxZlHlwcxcOcse0vHLijGl8xb1ucyCpm3NoRP0hhdZ8IiEgOF5WfarUBK2egWGdUwKg5n-snFqOi5NOR7F4=s256",
+                    "url" : "mixin://apps/56e28252-1aef-48a6-a0c7-2213652570d7"
+                },
+                {
+                    "title": "闪电交易",
+                    "sub_title": "币币兑换工具。\n",
+                    "icon_url": "https://mixin-images.zeromesh.net/nScYvKoJbEEaDsX2c55MQR64b_x7Ox-IRdKujR-Pv-1dw27NP6zSEJeFKxXQAqIXQBHpvGGZnIjae7CGQX0_vXU=s256",
+                    "url" : "mixin://apps/edb0bcf9-4521-43aa-a50d-21a2266a9d41"
+                }
+            ]
+        },
+        {
+            "title": "Community",
+            "data": [
+                {
+                    "title": "七三韭菜节",
+                    "sub_title": "2019 七三韭菜节：李笑来“录音门”一周年。",
+                    "icon_url": "https://mixin-images.zeromesh.net/o7KI0FBTIXg8Wpn6y6UL15y3fzCmowuUdXOPoUDitTs1oufZfhYih6caRD0uZcXn7pGls5XApUDJ48q_mFfuNA0=s256",
+                    "url" : "mixin://apps/39bc8d52-1152-41c2-a3f0-1d469f424885"
+                },
+                {
+                    "title": "定投公开课",
+                    "sub_title": "定投公开课\n",
+                    "icon_url": "https://mixin-images.zeromesh.net/ETNlYVcGMemU-oB8kRItVh7BFaVAkMZGnUDHG8b9xA7B9G4vHKg8bSAOUVxI_iDUpvDvuaw0eSIyOrrDgeGm4-A=s256",
+                    "url" : "mixin://apps/0642bca1-7ce3-4cf8-b48f-3f97771c8ce3"
+                },
+                {
+                    "title": "OTC",
+                    "sub_title": "Get BTC EOS XIN here",
+                    "icon_url": "https://mixin-images.zeromesh.net/mOuunqhMoKbUHM99IMCJXq3aJiKMSGF6Z3lN99hxZmf2reRmYedXJhWVfafrSYnoBpBFuDoSnja7mIjozgcuFQ=s256",
+                    "url" : "mixin://apps/fb523769-e4f9-4148-b16d-1ca0edcdb955"
+                }
+            ]
+        }
+        
+    ]
+}

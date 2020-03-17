@@ -3,23 +3,6 @@ import SwiftUI
 struct NodeDetailView: View {
     let node: MixinNode
     
-    fileprivate func ItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
-        Group {
-            VStack(spacing: 8) {
-                Text(title)
-                    .font(Font.system(size: 15))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(Color(.secondaryLabel))
-                    .lineLimit(1)
-                Text(value)
-                    .font(Font.system(size: 15))
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                    .foregroundColor(Color(.label))
-            }
-            Divider()
-        }
-    }
-    
     var body: some View {
         VStack(spacing: 8) {
             VStack(alignment: .leading) {

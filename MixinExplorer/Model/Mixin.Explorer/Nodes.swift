@@ -4,6 +4,7 @@ struct MinxinNetwork: Codable {
     let nodes: [MixinNode]
     let updatedAt: String
     
+   
     var validateCount: Int {
         return nodes.filter { $0.stat.data?.failed == nil }.count
     }
@@ -11,6 +12,16 @@ struct MinxinNetwork: Codable {
     var faileCount: Int {
         return nodes.filter { $0.stat.data?.failed != nil }.count
     }
+    
+    var date: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, dd MM yyyy HH:mm:ss zzz"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.formatterBehavior = .default
+        let date = dateFormatter.date(from: updatedAt)
+        return date
+    }
+    
 }
 
 struct MixinNode: Codable, Identifiable {

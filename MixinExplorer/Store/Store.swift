@@ -46,7 +46,7 @@ class Store: ObservableObject {
                 appState.mixinNetworkAssetList.loadingAssets = false
                 appState.settings.resultLoading.requestLoading = false
             case .failure(let error):
-                print(error)
+                break
             }
             appState.settings.resultLoading.requestLoading = false
         case .toggleDisplay(let type):
@@ -71,7 +71,7 @@ class Store: ObservableObject {
                 let filterChain = appState.mixinNetworkAssetList.chains.filter { $0.chainID == asset.chainID }
                 appState.snapDetail.chain = filterChain.first
             case .failure(let error):
-                print(error)
+                break
             }
             appState.snapDetail.loadingAsset = false
         case .removeSelectedMixinAsset:
@@ -92,7 +92,7 @@ class Store: ObservableObject {
             case .success(let snapshots):
                 appState.selectAssetSnapShotList.snapshots = snapshots
             case .failure(let error):
-                print(error)
+                break
             }
             appState.selectAssetSnapShotList.loadingSnapshots.loadingSnapShots = false
         case .loadSnapshot(let snapshot):
@@ -107,7 +107,7 @@ class Store: ObservableObject {
             case .success(let snapshot):
                 appState.currentSnapShot.snapshot = snapshot
             case .failure(let error):
-                print(error)
+                break
             }
             appState.currentSnapShot.loadingSnapShot = false
         case .loadCoinMarket(let symbol):
@@ -124,7 +124,7 @@ class Store: ObservableObject {
                 appState.coinMarket[symbol] = dataclass.data
                 appState.snapDetail.coin = dataclass.data
             case .failure(let error):
-                print(error)
+                break
             }
             appState.snapDetail.loadingCoinMarket = false
         case .loadVerifyToken(let token):
@@ -140,7 +140,7 @@ class Store: ObservableObject {
             case .success(let asset):
                 appState.verifyAsset.asset = asset
             case .failure(let error):
-                print(error)
+                break
             }
             appState.verifyAsset.loadingVerifyAsset = false
         case .loadMixinNode:
@@ -155,7 +155,7 @@ class Store: ObservableObject {
             case .success(let asset):
                 appState.nodes.mixinnetwork = asset
             case .failure(let error):
-                print(error)
+                break
             }
             appState.nodes.loading = false
         case .loadMixinTopAssets:
@@ -178,7 +178,7 @@ class Store: ObservableObject {
                 
                 
             case .failure(let error):
-                print(error)
+                break
             }
             appState.topAsset.loading = false
         case .searchAssets(let symbol):
@@ -194,9 +194,29 @@ class Store: ObservableObject {
             case .success(let asset):
                 appState.searchAsset.asset = asset
             case .failure(let error):
-                print(error)
+                break
             }
             appState.searchAsset.loading = false
+        case .loadFiat:
+            if appState.fiats.loading {
+                break
+            }
+            
+            appState.fiats.loading = true
+            appCommand = LoadingFiatCommand()
+            
+        case .loadFiatDone(let result):
+            switch result {
+            case .success(let fiats):
+                appState.fiats.fiat = fiats
+                fiats.forEach { fiat in
+                    appState.fiats.fiatHash[fiat.code] = fiat.rate
+                }
+            case .failure(let error):
+                break
+            }
+            appState.fiats.loading = false
+            
         }
         
         return (appState, appCommand)
@@ -204,7 +224,7 @@ class Store: ObservableObject {
     
     func dispatch(_ action: AppAction) {
         #if DEBUG
-        print("[ACTION]:\(action)")
+//        print("[ACTION]:\(action)")
         #endif
         
         let result = Store.reduce(state: appState, action: action)
@@ -212,7 +232,7 @@ class Store: ObservableObject {
         
         if let command = result.1 {
             #if DEBUG
-            print("[COMMAND]:\(command)")
+//            print("[COMMAND]:\(command)")
             #endif
             command.execute(in: self)
         }

@@ -56,9 +56,6 @@
 		7E921C402410A0EE00BD02CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E921C3F2410A0EE00BD02CC /* GoogleService-Info.plist */; };
 		7E921CF82410A91A00BD02CC /* DappItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E921CF72410A91A00BD02CC /* DappItemView.swift */; };
 		7E921CFC2410AE2500BD02CC /* Dapp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E921CFB2410AE2500BD02CC /* Dapp.swift */; };
-		7E921DE92410D8F200BD02CC /* Dapps.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E921DE82410D8F200BD02CC /* Dapps.json */; };
-		7E921F712412130800BD02CC /* F1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E921F702412130800BD02CC /* F1.json */; };
-		7E921F732412151500BD02CC /* Box.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E921F722412151500BD02CC /* Box.json */; };
 		7E98129B23EFEB7600FDBD59 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E98129A23EFEB7600FDBD59 /* SafariView.swift */; };
 		7E98129E23F253B700FDBD59 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E98129D23F253B700FDBD59 /* EmptyView.swift */; };
 		7EC11EF123F6E826003AE306 /* NodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC11EF023F6E826003AE306 /* NodeListView.swift */; };
@@ -81,6 +78,13 @@
 		7EF969342403B4DF00219BE3 /* ChainDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF969332403B4DF00219BE3 /* ChainDetail.swift */; };
 		7EF969362403BD2C00219BE3 /* NodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF969352403BD2C00219BE3 /* NodeDetailView.swift */; };
 		AC8460C4E07A29CDB8860E12 /* libPods-MixinExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 959852ADB2C64CB7CB6A9278 /* libPods-MixinExplorer.a */; };
+		C21512F4241F69A600276FED /* LoadingFiatRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21512F3241F69A600276FED /* LoadingFiatRequest.swift */; };
+		C21512F6241F6C0600276FED /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21512F5241F6C0600276FED /* Fiat.swift */; };
+		C21512F8241F6D4F00276FED /* LoadingFiatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21512F7241F6D4F00276FED /* LoadingFiatCommand.swift */; };
+		C21512FA241F6FF900276FED /* FiatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21512F9241F6FF900276FED /* FiatView.swift */; };
+		C2496513241F83F900FCBA17 /* DappBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2496512241F83F900FCBA17 /* DappBannerView.swift */; };
+		C2496515241F936500FCBA17 /* Dapp.json in Resources */ = {isa = PBXBuildFile; fileRef = C2496514241F936500FCBA17 /* Dapp.json */; };
+		C24966BF241FA50F00FCBA17 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24966BE241FA50F00FCBA17 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,9 +142,6 @@
 		7E921C3F2410A0EE00BD02CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E921CF72410A91A00BD02CC /* DappItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DappItemView.swift; sourceTree = "<group>"; };
 		7E921CFB2410AE2500BD02CC /* Dapp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dapp.swift; sourceTree = "<group>"; };
-		7E921DE82410D8F200BD02CC /* Dapps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dapps.json; sourceTree = "<group>"; };
-		7E921F702412130800BD02CC /* F1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = F1.json; sourceTree = "<group>"; };
-		7E921F722412151500BD02CC /* Box.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Box.json; sourceTree = "<group>"; };
 		7E98129A23EFEB7600FDBD59 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		7E98129D23F253B700FDBD59 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		7EC11EF023F6E826003AE306 /* NodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeListView.swift; sourceTree = "<group>"; };
@@ -166,6 +167,13 @@
 		7EF969352403BD2C00219BE3 /* NodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeDetailView.swift; sourceTree = "<group>"; };
 		959852ADB2C64CB7CB6A9278 /* libPods-MixinExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MixinExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732EAE32370480A67914649 /* Pods-MixinExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixinExplorer.release.xcconfig"; path = "Target Support Files/Pods-MixinExplorer/Pods-MixinExplorer.release.xcconfig"; sourceTree = "<group>"; };
+		C21512F3241F69A600276FED /* LoadingFiatRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFiatRequest.swift; sourceTree = "<group>"; };
+		C21512F5241F6C0600276FED /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		C21512F7241F6D4F00276FED /* LoadingFiatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFiatCommand.swift; sourceTree = "<group>"; };
+		C21512F9241F6FF900276FED /* FiatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatView.swift; sourceTree = "<group>"; };
+		C2496512241F83F900FCBA17 /* DappBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DappBannerView.swift; sourceTree = "<group>"; };
+		C2496514241F936500FCBA17 /* Dapp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dapp.json; sourceTree = "<group>"; };
+		C24966BE241FA50F00FCBA17 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,7 @@
 				7E456E9424039EF3003F9028 /* LoadingMixinNetworkRequest.swift */,
 				7E834BB92406890B00155319 /* LoadingTopMixinAssetRequest.swift */,
 				7E2EAB3F2407A26F00F215FA /* SearchAssetsRequest.swift */,
+				C21512F3241F69A600276FED /* LoadingFiatRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				7E456EA224039FF3003F9028 /* LoadMixinNodesCommand.swift */,
 				7E2EAB412407A2B000F215FA /* SearchAssetsCommand.swift */,
 				7E921C3924109EA900BD02CC /* LoadMixinTopAssetCommand.swift */,
+				C21512F7241F6D4F00276FED /* LoadingFiatCommand.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -295,6 +305,7 @@
 				7E68555323EEF58D0021B9B7 /* Snapshot.swift */,
 				7E834BBB2406895C00155319 /* TopAsset.swift */,
 				7E921CFB2410AE2500BD02CC /* Dapp.swift */,
+				C21512F5241F6C0600276FED /* Fiat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +347,7 @@
 				7E0C8BD323EDB47B00BEF92D /* ActivityIndicator.swift */,
 				7E98129A23EFEB7600FDBD59 /* SafariView.swift */,
 				7E98129D23F253B700FDBD59 /* EmptyView.swift */,
+				C24966BE241FA50F00FCBA17 /* Helper.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -348,6 +360,7 @@
 				7E456E88240397B9003F9028 /* AboutView.swift */,
 				7EC11EF423F6F880003AE306 /* InfoView.swift */,
 				7E604FE923E6A838000BDC34 /* SearchView.swift */,
+				C21512F9241F6FF900276FED /* FiatView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -357,6 +370,7 @@
 			children = (
 				7E921C3D2410A01C00BD02CC /* DappView.swift */,
 				7E921CF72410A91A00BD02CC /* DappItemView.swift */,
+				C2496512241F83F900FCBA17 /* DappBannerView.swift */,
 			);
 			path = Dapp;
 			sourceTree = "<group>";
@@ -382,9 +396,7 @@
 		7ECF92BA237C2AD20097A0A6 /* MixinExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				7E921F702412130800BD02CC /* F1.json */,
-				7E921F722412151500BD02CC /* Box.json */,
-				7E921DE82410D8F200BD02CC /* Dapps.json */,
+				C2496514241F936500FCBA17 /* Dapp.json */,
 				7E0C8BD823EDC66F00BEF92D /* Mixin Explorer.entitlements */,
 				7E0BB56723FA635F00A1B45E /* Utility */,
 				7E0C8BD723EDBBAD00BEF92D /* Network */,
@@ -510,13 +522,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E834BB32406745300155319 /* Localizable.strings in Resources */,
-				7E921F732412151500BD02CC /* Box.json in Resources */,
 				7ECF92C8237C2AD40097A0A6 /* LaunchScreen.storyboard in Resources */,
-				7E921DE92410D8F200BD02CC /* Dapps.json in Resources */,
+				C2496515241F936500FCBA17 /* Dapp.json in Resources */,
 				7E921C402410A0EE00BD02CC /* GoogleService-Info.plist in Resources */,
 				7ECF92C5237C2AD40097A0A6 /* Preview Assets.xcassets in Resources */,
 				7ECF92C2237C2AD40097A0A6 /* Assets.xcassets in Resources */,
-				7E921F712412130800BD02CC /* F1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +566,7 @@
 				7E98129B23EFEB7600FDBD59 /* SafariView.swift in Sources */,
 				7ECF92BC237C2AD20097A0A6 /* AppDelegate.swift in Sources */,
 				7ECF92BE237C2AD20097A0A6 /* SceneDelegate.swift in Sources */,
+				C21512F8241F6D4F00276FED /* LoadingFiatCommand.swift in Sources */,
 				7EC11EF323F6E83A003AE306 /* NodeRow.swift in Sources */,
 				7E0C8BD223EDABB200BEF92D /* Asset.swift in Sources */,
 				7E456E9124039EE2003F9028 /* LoadingCoinMarketRequest.swift in Sources */,
@@ -565,9 +576,11 @@
 				7E834BBA2406890B00155319 /* LoadingTopMixinAssetRequest.swift in Sources */,
 				7E834BBE2406A16400155319 /* SnapshotLoadingDetailView.swift in Sources */,
 				7E456EA324039FF3003F9028 /* LoadMixinNodesCommand.swift in Sources */,
+				C21512F6241F6C0600276FED /* Fiat.swift in Sources */,
 				7EEADD1423E46D400069CE25 /* AppState.swift in Sources */,
 				7E8AE7A02412586A0021D74C /* NodeView.swift in Sources */,
 				7EF969362403BD2C00219BE3 /* NodeDetailView.swift in Sources */,
+				C21512FA241F6FF900276FED /* FiatView.swift in Sources */,
 				7E68555623EEF6740021B9B7 /* AssetDetail.swift in Sources */,
 				7EEADD1623E46D4B0069CE25 /* Store.swift in Sources */,
 				7ECF92C0237C2AD20097A0A6 /* MainTab.swift in Sources */,
@@ -588,6 +601,7 @@
 				7E2EAB402407A26F00F215FA /* SearchAssetsRequest.swift in Sources */,
 				7EC11EF523F6F880003AE306 /* InfoView.swift in Sources */,
 				7E456E9B24039FCF003F9028 /* LoadSnapshotsCommand.swift in Sources */,
+				C2496513241F83F900FCBA17 /* DappBannerView.swift in Sources */,
 				7E921C3A24109EA900BD02CC /* LoadMixinTopAssetCommand.swift in Sources */,
 				7EC11EF723F6FDB7003AE306 /* SnapshotDetailView.swift in Sources */,
 				7E456E89240397B9003F9028 /* AboutView.swift in Sources */,
@@ -606,6 +620,7 @@
 				7E456E9524039EF3003F9028 /* LoadingMixinNetworkRequest.swift in Sources */,
 				7EED5BA823FD612000EF1B08 /* VerifyAssetView.swift in Sources */,
 				7EED5BAA23FD615600EF1B08 /* VerifyAssetRowView.swift in Sources */,
+				C21512F4241F69A600276FED /* LoadingFiatRequest.swift in Sources */,
 				7E456E9324039EE9003F9028 /* LoadingVerifyRequest.swift in Sources */,
 				7E0391C723844BCE001FA70B /* AssetRowView.swift in Sources */,
 				7E0C8BD423EDB47B00BEF92D /* ActivityIndicator.swift in Sources */,
@@ -615,6 +630,7 @@
 				7EEADD1E23E496AA0069CE25 /* Appcommand.swift in Sources */,
 				7E456E852402BE53003F9028 /* MiningCalculatorView.swift in Sources */,
 				7EC11EF123F6E826003AE306 /* NodeListView.swift in Sources */,
+				C24966BF241FA50F00FCBA17 /* Helper.swift in Sources */,
 				7E456E8D24039ECE003F9028 /* LoadingSnapshotRequest.swift in Sources */,
 				7E5CFCE323E9B4E600C3C579 /* NetworkList.swift in Sources */,
 			);
@@ -768,7 +784,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MixinExplorer/Mixin Explorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 24;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MixinExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = RD4GU69WG6;
@@ -778,7 +794,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.mixin.explorer;
 				PRODUCT_NAME = "Mixin Explorer";
 				SUPPORTS_MACCATALYST = YES;
@@ -794,7 +810,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MixinExplorer/Mixin Explorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 24;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MixinExplorer/Preview Content\"";
 				DEVELOPMENT_TEAM = RD4GU69WG6;
@@ -804,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.mixin.explorer;
 				PRODUCT_NAME = "Mixin Explorer";
 				SUPPORTS_MACCATALYST = YES;

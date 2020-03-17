@@ -31,4 +31,7 @@ enum AppAction {
     
     case searchAssets(symbol: String)
     case searchAssetsDone(result: Result<[TopAsset], AppError>)
+    
+    case loadFiat
+    case loadFiatDone(result: Result<[Fiat], AppError>)
 }

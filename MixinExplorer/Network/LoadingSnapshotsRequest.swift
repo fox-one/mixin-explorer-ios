@@ -23,7 +23,7 @@ struct LoadingSnapshotsRequest {
             .map { $0.data }
             .decode(type: NetworkList<[Snapshot]>.self, decoder: appDecoder)
             .map({ list -> [Snapshot] in
-                print(list)
+                
                 return list.data
             })
             .eraseToAnyPublisher()

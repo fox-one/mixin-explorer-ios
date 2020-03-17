@@ -19,7 +19,14 @@ struct ToolView: View {
                 NavigationLink(destination: ChainListView()) {
                     Text("Chain")
                 }
+                
             }
+
+//            Section(header: Text("Settings")) {
+//                NavigationLink(destination: FiatView()) {
+//                    Text("Fiat")
+//                }
+//            }
             
             Section (header: Text("About")) {
                 NavigationLink(destination: InfoView()) {

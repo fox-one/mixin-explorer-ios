@@ -4,40 +4,50 @@ import Kingfisher
 struct DappItemView: SwiftUI.View {
     let model: Dapp
     var body: some SwiftUI.View {
-        VStack(spacing: 4) {
+        HStack() {
             KFImage(URL(string: model.iconURL))
-                .placeholder{
+                .placeholder {
                     SwiftUI.Image("placeholder")
                         .resizable()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 60, height: 60)
                         .aspectRatio(contentMode: .fit)
             }
             .resizable()
-            .frame(width: 50, height: 50)
+            .frame(width: 60, height: 60)
             .cornerRadius(5)
             .aspectRatio(contentMode: .fit)
-            .frame(alignment: .top)
+            .frame(alignment: .leading)
+            .padding(0)
             
-            Text(model.title)
-                .foregroundColor(.primary)
-                .font(.caption)
-                .lineLimit(1)
-            
-            Text(model.subTitle)
-                .foregroundColor(.secondary)
-                .font(.caption)
-                .lineLimit(2)
+            VStack(alignment: .leading, spacing: 10) {
+                Text(model.title)
+                    .foregroundColor(.primary)
+                    .font(.system(size: 15))
+                    .lineLimit(1)
+                
+                Text(model.subTitle)
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 15))
+                    .lineLimit(1)
+                
             }
-        .frame(width: 80)
-        .padding(5)
-        .onTapGesture {
-                UIApplication.shared.open(URL(string:self.model.url)!, options: [:], completionHandler: nil)
+            Spacer()
         }
+        .frame(width: itemWidth())
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+        .onTapGesture {
+            UIApplication.shared.open(URL(string:self.model.url)!, options: [:], completionHandler: nil)
+        }
+    }
+    
+    func itemWidth() -> CGFloat {
+        let width = UIScreen.main.bounds.width - 40
+        return width
     }
 }
 
 struct DappItemView_Previews: PreviewProvider {
     static var previews: some SwiftUI.View {
-        DappItemView(model: Dapp(title: "", subTitle: "", iconURL: "", url: ""))
+        DappItemView(model: Dapp(title: "12312asdasdadasdad312", subTitle: "123213", iconURL: "", url: ""))
     }
 }

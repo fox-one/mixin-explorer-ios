@@ -12,24 +12,6 @@ struct SnapshotLoadingDetailView: SwiftUI.View {
         store.appState.currentSnapShot
     }
     
-    
-    fileprivate func ItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
-        Group {
-            VStack(spacing: 8) {
-                     Text(title)
-                         .font(Font.system(size: 15))
-                         .frame(maxWidth: .infinity, alignment: .leading)
-                         .foregroundColor(Color(.secondaryLabel))
-                         .lineLimit(1)
-                     Text(value)
-                         .font(Font.system(size: 15))
-                         .frame(maxWidth: .infinity,alignment: .leading)
-                         .foregroundColor(Color(.label))
-                 }
-                 Divider()
-        }
-    }
-    
     var body: some SwiftUI.View {
         Group {
             if setting.loadingSnapShot {
@@ -65,19 +47,19 @@ struct SnapshotLoadingDetailView: SwiftUI.View {
                                     .font(Font.system(size: 14))
                                     .foregroundColor(Color(.secondaryLabel))
                                 Button("\(store.appState.currentSnapShot.snapshot!.snapshotID)") {
-                                               UIPasteboard.general.string = self.store.appState.currentSnapShot.snapshot!.snapshotID
-                                               postNoti(subtitle: self.store.appState.currentSnapShot.snapshot!.snapshotID)
+                                    UIPasteboard.general.string = self.store.appState.currentSnapShot.snapshot!.snapshotID
+                                    postNoti(subtitle: self.store.appState.currentSnapShot.snapshot!.snapshotID)
                                 }
-                                    .multilineTextAlignment(.leading)
-                                    .lineLimit(1)
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                    .foregroundColor(Color(.label))
-                                    .font(Font.system(size: 14))
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(1)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .foregroundColor(Color(.label))
+                                .font(Font.system(size: 14))
                             }
                             
                             ItemList(title: "Amount:", value: "\(store.appState.currentSnapShot.snapshot!.amount) \(store.appState.currentSnapShot.snapshot!.asset.symbol)")
                             
-                           ItemList(title: "Source:", value: "\(store.appState.currentSnapShot.snapshot!.source)")
+                            ItemList(title: "Source:", value: "\(store.appState.currentSnapShot.snapshot!.source)")
                             ItemList(title: "Time:", value: " \(store.appState.currentSnapShot.snapshot!.date.timeString)")
                             
                             

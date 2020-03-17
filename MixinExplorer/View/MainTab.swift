@@ -12,7 +12,7 @@ enum ExplorerType: Int {
         case .topAsset:
             return "Mixin Explorer"
         case .dapp:
-            return "Dapp"
+            return "DApp"
         case .node:
             return "Node"
         case .tool:
@@ -74,7 +74,7 @@ struct MainTab: View {
                             } else {
                                 Image(systemName: "gift")
                             }
-                            Text("Dapp")
+                            Text("DApp")
                     }.tag(1)
                 }
                 

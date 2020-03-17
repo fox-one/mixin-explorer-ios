@@ -9,24 +9,24 @@ struct SnapshotRowView: SwiftUI.View {
                 Text("Snapshot ID:")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color(.secondaryLabel))
-                .lineLimit(1)
+                    .lineLimit(1)
                 
                 Button("\(model.snapshotID)") {
                     UIPasteboard.general.string = self.model.snapshotID
                     postNoti(subtitle: self.model.snapshotID)
                 }
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .foregroundColor(Color(.label))
-                    .font(Font.system(size: 14))
-                    .minimumScaleFactor(0.9)
+                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .foregroundColor(Color(.label))
+                .font(Font.system(size: 14))
+                .minimumScaleFactor(0.9)
             }
             HStack {
                 Text("Amount:")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color(.secondaryLabel))
-                .lineLimit(1)
+                    .lineLimit(1)
                 Text("\(model.amount) \(model.asset.symbol)").frame(maxWidth: .infinity, alignment: .trailing)
                     .font(Font.system(size: 14))
                     .foregroundColor(Color(.label))
@@ -35,7 +35,7 @@ struct SnapshotRowView: SwiftUI.View {
                 Text("Time:")
                     .font(Font.system(size: 14))
                     .foregroundColor(Color(.secondaryLabel))
-                .lineLimit(1)
+                    .lineLimit(1)
                 Text("\(model.date.timeString)").frame(maxWidth: .infinity, alignment: .trailing)
                     .font(Font.system(size: 14))
                     .foregroundColor(Color(.label))

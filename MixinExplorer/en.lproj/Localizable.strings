@@ -13,7 +13,7 @@
 
 "Chain" = "Chain";
 
-"Node" = "Node";
+"Node" = "Mixin Node";
 
 "Tools" = "Tools";
 
@@ -110,6 +110,8 @@
 
 "Node Count:" = "Node Count:";
 
+"Fail Node:" = "Fail Node:";
+
 "Chain Capitalization:" = "Chain Capitalization:";
 
 "Search Mixin Network" = "Search Mixin Network";
@@ -131,3 +133,9 @@
 "Copied to Pasteboard" = "Copied to Pasteboard";
 
 "UP Time:" = "UP Time:";
+
+"Node Status" = "Node Status";
+
+"Settings" = "Settings";
+
+"Update Time:" = "Update Time:";

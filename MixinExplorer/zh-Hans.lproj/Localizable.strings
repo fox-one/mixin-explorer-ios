@@ -10,7 +10,7 @@
 
 "Chain" = "主链";
 
-"Node" = "节点";
+"Node" = "Mixin 节点";
 
 "Tools" = "工具";
 
@@ -104,6 +104,8 @@
 
 "Node Count:" = "节点数量:";
 
+"Fail Node:" = "失联节点:";
+
 "Chain Capitalization:" = "资产总额:";
 
 "Mining Tool" = "节点工具";
@@ -127,3 +129,9 @@
 "Copied to Pasteboard" = "已复制到剪切板";
 
 "UP Time:" = "启动时间:";
+
+"Node Status" = "节点状态";
+
+"Settings" = "设置";
+
+"Update Time:" = "更新时间:";

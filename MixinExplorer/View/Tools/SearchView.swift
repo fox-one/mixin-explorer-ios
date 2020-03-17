@@ -22,7 +22,7 @@ struct SearchView: View {
                     Spacer()
                     Button("Search") {
                         self.store.dispatch(.loadSnapshot(snopshotID: self.settings.checker.snapshotID))
-                        //                        print("Search")
+                        //                        "Search")
                     }
                     Spacer()
                 }

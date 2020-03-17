@@ -25,7 +25,6 @@ struct SearchAssetView: View {
                     Spacer()
                     Button("Search") {
                         self.store.dispatch(.searchAssets(symbol: self.settings.checker.symbol))
-                        print("Symbol")
                     }
                     Spacer()
                 }

@@ -1,17 +1,17 @@
 import Foundation
 import Combine
 
-struct LoadMixinTopAssetCommand: AppCommand {
+struct LoadingFiatCommand: AppCommand {
     func execute(in store: Store) {
         let token = SubscriptionToken()
-        LoadingTopMixinAssetRequest()
+        LoadingFiatRequest()
             .publisher.sink(receiveCompletion: { complete in
                 if case .failure(let error) = complete {
-                    store.dispatch(.loadMixinTopAssetsDone(result: .failure(error)))
+                    store.dispatch(.loadFiatDone(result: .failure(error)))
                 }
                 token.unseal()
             }, receiveValue: { value in
-                store.dispatch(.loadMixinTopAssetsDone(result: .success(value)))
+                store.dispatch(.loadFiatDone(result: .success(value)))
             })
             .seal(in: token)
     }

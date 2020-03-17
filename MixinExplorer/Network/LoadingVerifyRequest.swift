@@ -20,7 +20,7 @@ struct LoadingVerifyRequest {
             .map { $0.data }
             .decode(type: NetworkList<[VerifyAsset]>.self, decoder: appDecoder)
             .map({ list -> [VerifyAsset] in
-                print(list)
+                
                 return list.data
             })
             .eraseToAnyPublisher()

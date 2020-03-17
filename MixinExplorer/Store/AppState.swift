@@ -12,16 +12,12 @@ struct AppState {
     var nodes = MixinNodeList()
     var topAsset = TopAssetList()
     var searchAsset = SearchAssetList()
+    var fiats = Fiats()
     
 
-    @BundleJSONStorage(forResource: "F1", type: "json")
-    var foxoneDapp: [Dapp]?
+    @BundleJSONStorage(forResource: "Dapp", type: "json")
+    var dapp: Dapps?
     
-    @BundleJSONStorage(forResource: "Dapps", type: "json")
-    var dapps: [Dapp]?
-    
-    @BundleJSONStorage(forResource: "Box", type: "json")
-    var boxs: [Dapp]?
 }
 
 extension AppState {
@@ -40,6 +36,12 @@ extension AppState {
         var peakThroughput: String = "0"
         var snapshotsCount: String = "0"
         var loadingAssets = false
+    }
+    
+    class Fiats {
+        @Published var loading = false
+        var fiat: [Fiat] = []
+        var fiatHash:[String :Double] = [:]
     }
     
     class MixinNodeList {
@@ -95,7 +97,6 @@ extension AppState {
         var resultLoading = ResulteLoading()
         
         class InputChecker {
-   
             @Published var snapshotID = ""
             @Published var token = ""
             @Published var symbol = ""

@@ -28,6 +28,7 @@ struct NodeRow: View {
                         }
                     }
                 }
+                
                 HStack {
                     Text("Host:")
                         .font(Font.system(size: 16))
@@ -39,7 +40,6 @@ struct NodeRow: View {
                         .font(Font.system(size: 16, weight: .light))
                         .padding(.bottom, 4)
                 }
-                
                 
                 if node.stat.data != nil {
                     HStack {

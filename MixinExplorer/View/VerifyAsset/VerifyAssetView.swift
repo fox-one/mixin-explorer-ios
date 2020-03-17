@@ -23,7 +23,6 @@ struct VerifyAssetView: View {
                     Spacer()
                     Button("Search") {
                         self.store.dispatch(.loadVerifyToken(token: self.settings.checker.token))
-                        print("Token")
                     }
                     Spacer()
                 }

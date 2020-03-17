@@ -33,14 +33,14 @@ struct SnapshotDetailView: SwiftUI.View {
                             .foregroundColor(Color(.secondaryLabel))
                         
                         Button("\(model.snapshotID)") {
-                                       UIPasteboard.general.string = self.model.snapshotID
-                                       postNoti(subtitle: self.model.snapshotID)
-                                   }
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(1)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(Color(.label))
-                            .font(Font.system(size: 14))
+                            UIPasteboard.general.string = self.model.snapshotID
+                            postNoti(subtitle: self.model.snapshotID)
+                        }
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color(.label))
+                        .font(Font.system(size: 14))
                     }
                     
                     Divider()
@@ -74,7 +74,7 @@ struct SnapshotDetailView: SwiftUI.View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(Font.system(size: 14))
                             .foregroundColor(Color(.secondaryLabel))
-                        Text(" \(model.date.timeString)").frame(maxWidth: .infinity, alignment: .leading)
+                        Text("\(model.date.timeString)").frame(maxWidth: .infinity, alignment: .leading)
                             .font(Font.system(size: 14))
                             .foregroundColor(Color(.label))
                     }
