@@ -33,20 +33,31 @@ struct AssetRowView: SwiftUI.View {
                 .offset(x: 12, y: 12)
             }
             
-            HStack(alignment: .center, spacing: 0.0) {
+            HStack(alignment: .center, spacing: 2.0) {
                 Text(model.symbol)
                     .frame(maxWidth: 100, alignment: .leading)
                     .foregroundColor(Color(.label))
                     .font(Font.system(size: 18, weight: .bold))
                 VStack {
-                    Text("\(getAmountValue()) \(model.symbol)")
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .font(Font.system(size: 16))
-                        .foregroundColor(Color(.secondaryLabel))
-                    HStack(alignment: .center, spacing: 0.0) {
-                        Text("\(model.marketCap) USD")
+                    HStack(alignment: .firstTextBaseline, spacing: 0) {
+                        Text("\(getAmountValue())")
                             .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(Font.system(size: 16))
+                            .font(Font.custom("DINAlternate-Bold", size: 16))
+                            .foregroundColor(Color(.label))
+                        Text(" \(model.symbol)")
+                            .frame(alignment: .trailing)
+                            .font(Font.system(size: 11, weight: .bold))
+                            .foregroundColor(Color(.label))
+                    }
+                    
+                    HStack(alignment: .firstTextBaseline, spacing: 0.0) {
+                        Text("\(model.marketCap)")
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .font(Font.custom("DINAlternate-Bold", size: 16))
+                            .foregroundColor(Color(.secondaryLabel))
+                        Text(" USD")
+                            .frame(alignment: .trailing)
+                            .font(Font.system(size: 11, weight: .bold))
                             .foregroundColor(Color(.secondaryLabel))
                     }
                 }.padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
@@ -54,6 +65,8 @@ struct AssetRowView: SwiftUI.View {
         }
         .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
     }
+    
+    
     
     func getAmountValue() -> String {
         var value: Double = 0

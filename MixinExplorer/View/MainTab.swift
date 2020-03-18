@@ -114,6 +114,7 @@ struct MainTab: View {
             self.store.dispatch(.loadMixinNode)
             self.store.dispatch(.loadMixinTopAssets)
             self.store.dispatch(.loadMixinAssets)
+            self.store.dispatch(.loadCoinMarket(symbol: "XIN"))
         }
         .modifier( WTF() )
     }

@@ -82,7 +82,7 @@ struct AssetDetailView: SwiftUI.View {
                         }
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
                     
-                }
+                }.padding(.bottom, 10)
                 Divider()
                 Text("Info")
                     .font(Font.system(size: 17, weight: .bold))
@@ -104,70 +104,40 @@ struct AssetDetailView: SwiftUI.View {
                         .foregroundColor(Color(.label))
                         .lineLimit(1)
                     }
+
                     
-                    //                    if store.appState.snapDetail.coin != nil {
-                    HStack {
-                        Text("Price:")
-                            .font(Font.system(size: 15))
-                            .foregroundColor(Color(.secondaryLabel))
-                            .lineLimit(1)
-                        Text("\(model.priceUSD) USD")
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(Font.system(size: 15))
-                            .foregroundColor(Color(.label))
-                    }
+                    ValueItemList(title: "Price:", value: "\(model.priceUSD)")
+
+                    self.ItemList(title: "Snapshots Count:", value: "\(store.appState.snapDetail.asset!.snapshotsCountValue.decimalFormatter)")
                     
-                    //                        HStack {
-                    //                            Text("Max Supply:")
-                    //                                .font(Font.system(size: 15))
-                    //                                .foregroundColor(Color(.secondaryLabel))
-                    //                                .lineLimit(1)
-                    //                            Text("\(store.appState.snapDetail.coin!.coin.maxSupply)")
-                    //                                .frame(maxWidth: .infinity, alignment: .trailing)
-                    //                                .font(Font.system(size: 15))
-                    //                                .foregroundColor(Color(.label))
-                    //                        }
-                    //                    }
-                    
-                    
-                    HStack {
-                        Text("Snapshots Count:")
-                            .font(Font.system(size: 15))
-                            .foregroundColor(Color(.secondaryLabel))
-                            .lineLimit(1)
-                        Text("\(store.appState.snapDetail.asset!.snapshotsCount)")
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(Font.system(size: 15))
-                            .foregroundColor(Color(.label))
-                    }
-                    
+
                     if store.appState.snapDetail.chain != nil {
                         NavigationLink(destination: MixinChainDetail(model: store.appState.snapDetail.chain!)) {
-                            HStack {
-                                Text("Chain:")
-                                    .font(Font.system(size: 15))
-                                    .foregroundColor(Color(.secondaryLabel))
-                                    .lineLimit(1)
-                                Text("\(store.appState.snapDetail.chain!.name)")
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                    .font(Font.system(size: 15))
-                                    .foregroundColor(Color(.systemBlue))
-                            }
-                            
-                            
+//                            HStack {
+//                                Text("Chain:")
+//                                    .font(Font.system(size: 15))
+//                                    .foregroundColor(Color(.secondaryLabel))
+//                                    .lineLimit(1)
+//                                Text("\(store.appState.snapDetail.chain!.name)")
+//                                    .frame(maxWidth: .infinity, alignment: .trailing)
+//                                    .font(Font.system(size: 15))
+//                                    .foregroundColor(Color(.systemBlue))
+//                            }
+                            self.ItemList(title: "Chain:", value: "\(store.appState.snapDetail.chain!.name)")
                             
                         }
+                        self.ItemList(title: "Withdrawal Fee:", value: "\(store.appState.snapDetail.chain!.withdrawalFee)")
                         
-                        HStack {
-                            Text("Withdrawal Fee:")
-                                .font(Font.system(size: 15))
-                                .foregroundColor(Color(.secondaryLabel))
-                                .lineLimit(1)
-                            Text("\(store.appState.snapDetail.chain!.withdrawalFee)")
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                                .font(Font.system(size: 15))
-                                .foregroundColor(Color(.label))
-                        }
+//                        HStack {
+//                            Text("Withdrawal Fee:")
+//                                .font(Font.system(size: 15))
+//                                .foregroundColor(Color(.secondaryLabel))
+//                                .lineLimit(1)
+//                            Text("\(store.appState.snapDetail.chain!.withdrawalFee)")
+//                                .frame(maxWidth: .infinity, alignment: .trailing)
+//                                .font(Font.system(size: 15))
+//                                .foregroundColor(Color(.label))
+//                        }
                         
                     } else {
                         ActivityIndicator(shouldAnimate: settingsBinding.loadingAsset)
@@ -207,8 +177,6 @@ struct AssetDetailView: SwiftUI.View {
                 //                self.store.dispatch(.loadCoinMarket(symbol: self.model.symbol))
             }
         }
-        
-        
     }
     
     func getChainIcon() -> URL? {
@@ -228,6 +196,46 @@ struct AssetDetailView: SwiftUI.View {
         }
         
         return value.decimalFormatter
+    }
+    
+    
+    func ItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
+        Group {
+            HStack(spacing: 8) {
+                Text(title)
+                    .font(Font.system(size: 16))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(Color(.secondaryLabel))
+                    .lineLimit(1)
+                Text(value)
+                    .font(Font.system(size: 16))
+                    .frame(maxWidth: .infinity,alignment: .trailing)
+                    .foregroundColor(Color(.label))
+                .lineLimit(1)
+            }
+        }
+    }
+
+    func ValueItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
+        Group {
+            HStack(spacing: 8) {
+                Text(title)
+                    .font(Font.system(size: 16))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(Color(.secondaryLabel))
+                    .lineLimit(1)
+            HStack(alignment: .firstTextBaseline, spacing: 0.0) {
+                    Text(value)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(Font.custom("DINAlternate-Regular", size: 16))
+                        .foregroundColor(Color(.label))
+                    Text(" USD")
+                        .frame(alignment: .trailing)
+                        .font(Font.system(size: 11, weight: .bold))
+                        .foregroundColor(Color(.label))
+                }
+            }
+        }
     }
 }
 

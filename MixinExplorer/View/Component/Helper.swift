@@ -34,3 +34,25 @@ func HItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
         }
     }
 }
+
+func ValueItemList(title: LocalizedStringKey, value: String) -> some SwiftUI.View {
+    Group {
+        HStack(spacing: 8) {
+            Text(title)
+                .font(Font.system(size: 16))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(Color(.label))
+                .lineLimit(1)
+        HStack(alignment: .firstTextBaseline, spacing: 0.0) {
+                Text(value)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .font(Font.custom("DINAlternate-Bold", size: 16))
+                    .foregroundColor(Color(.secondaryLabel))
+                Text(" USD")
+                    .frame(alignment: .trailing)
+                    .font(Font.system(size: 11, weight: .bold))
+                    .foregroundColor(Color(.secondaryLabel))
+            }
+        }
+    }
+}

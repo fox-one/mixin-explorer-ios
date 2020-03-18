@@ -11,16 +11,12 @@ struct SnapshotRowView: SwiftUI.View {
                     .foregroundColor(Color(.secondaryLabel))
                     .lineLimit(1)
                 
-                Button("\(model.snapshotID)") {
-                    UIPasteboard.general.string = self.model.snapshotID
-                    postNoti(subtitle: self.model.snapshotID)
-                }
+                Text("\(model.snapshotID)")
                 .multilineTextAlignment(.leading)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .foregroundColor(Color(.label))
+                .foregroundColor(Color(.systemBlue))
                 .font(Font.system(size: 14))
-                .minimumScaleFactor(0.9)
             }
             HStack {
                 Text("Amount:")

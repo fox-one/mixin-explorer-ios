@@ -59,7 +59,7 @@ class Store: ObservableObject {
             appState.snapDetail.asset = nil
             appState.selectAssetSnapShotList.snapshots = []
             appState.snapDetail.chain = nil
-            appState.snapDetail.coin = nil
+//            appState.snapDetail.coin = nil
             
             appState.snapDetail.loadingAsset = true
             appCommand = LoadAssetDetailCommand(assetId: assetID)
@@ -78,7 +78,7 @@ class Store: ObservableObject {
             appState.snapDetail.asset = nil
             appState.selectAssetSnapShotList.snapshots = []
             appState.snapDetail.chain = nil
-            appState.snapDetail.coin = nil
+//            appState.snapDetail.coin = nil
         case .loadSnapshots(let assetId):
             if appState.selectAssetSnapShotList.loadingSnapshots.loadingSnapShots {
                 break
@@ -175,7 +175,6 @@ class Store: ObservableObject {
                 
                 appState.topAsset.asset = filterAssset
                 appState.topAsset.capitalization = capitalization
-                
                 
             case .failure(let error):
                 break

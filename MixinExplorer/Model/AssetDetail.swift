@@ -23,4 +23,8 @@ struct AssetDetail: Codable {
     var amountValue: Double {
          return Double(amount) ?? 0.0
      }
+    
+    var snapshotsCountValue: Double {
+        return Double(snapshotsCount) ?? 0.0
+    }
 }

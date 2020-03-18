@@ -7,7 +7,7 @@ struct DappBannerView: SwiftUI.View {
         VStack(alignment: .leading, spacing: 2) {
             Text("News")
                 .font(.callout)
-                .foregroundColor(.blue)
+                .foregroundColor(Color(.systemBlue))
                 .lineLimit(1)
             Text(model.title)
                 .font(.headline)

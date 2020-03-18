@@ -77,7 +77,7 @@ struct Btc: Codable {
 
 // MARK: - Quote
 struct Quote: Codable {
-    let usd: Usd
+    let usd: QuoteUSD
     
     enum CodingKeys: String, CodingKey {
         case usd = "USD"
@@ -85,7 +85,7 @@ struct Quote: Codable {
 }
 
 // MARK: - Usd
-struct Usd: Codable {
+struct QuoteUSD: Codable {
     let price: Double
     let volume24H: Double
     let percentChange1H: Double

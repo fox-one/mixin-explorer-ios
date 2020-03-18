@@ -8,11 +8,9 @@ struct DappView: View {
         store.appState.dapp
     }
     
-    
     func section(sec: DappSection) -> some SwiftUI.View {
         Group {
             Divider().padding(.leading).padding(.trailing)
-            
             Text(sec.title)
                 .font(.system(size: 22, weight: .bold))
                 .padding(.leading, 16)
