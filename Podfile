@@ -8,4 +8,6 @@ target 'MixinExplorer' do
   # pod 'MixinKit', git: 'git@github.com:fox-one/mixin-ios-sdk.git', :branch=> 'master'
   # Pods for MixinNetworkExplore
   pod 'Kingfisher/SwiftUI'
+  pod 'Firebase'
+  
 end
