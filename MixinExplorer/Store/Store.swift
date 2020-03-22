@@ -169,11 +169,11 @@ class Store: ObservableObject {
             switch result {
             case .success(let asset):
                 
-                let filterAssset = asset.filter { $0.assetId != "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"}
+//                let filterAssset = asset.filter { $0.assetId != "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"}
                 
-                let capitalization = filterAssset.reduce(0) { $0 + $1.capitalization }
+                let capitalization = asset.reduce(0) { $0 + $1.capitalization }
                 
-                appState.topAsset.asset = filterAssset
+                appState.topAsset.asset = asset
                 appState.topAsset.capitalization = capitalization
                 
             case .failure(let error):
